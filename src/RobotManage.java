@@ -24,32 +24,40 @@ public class RobotManage {
         switch (Robot_id){
             case "0":
                 Robot_flag = 0;
+                break;
             case "1":
                 Robot_1 r1 = new Robot_1();
                 r1.main_1();
                 Robot_flag = 1;
+                break;
             case "2":
-                Robot_2 r2 = new Robot_2();
+                Robot_2 r2 = new Robot_2(0,0);
                 r2.main_2();
                 Robot_flag = 1;
+                break;
             case "3":
                 Robot_3 r3 = new Robot_3();
-                r3.main_3();
+                r3.main_3(r3);
                 Robot_flag = 1;
+                break;
             case "4":
                 Robot_4 r4 = new Robot_4();
-                r4.main_4();
+                r4.main_4(r4);
                 Robot_flag = 1;
+                break;
             case "5":
                 Robot_5 r5 = new Robot_5();
-                r5.main_5();
+                r5.main_5(r5);
                 Robot_flag = 1;
+                break;
             case "6":
                 Robot_6 r6 = new Robot_6();
-                r6.main_6();
+                r6.main_6(r6);
                 Robot_flag = 1;
+                break;
             default:
                 Robot_flag = 2;
+                break;
         }
     }
 
@@ -65,6 +73,7 @@ public class RobotManage {
                 break;
             }
         }
+        System.exit(0);
 
     }
 }
