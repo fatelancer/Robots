@@ -14,29 +14,28 @@ public class Robot_6 extends JFrame {
     private double Robot_speed;
     private double Robot_temp;
 
-    JPanel p1 = new JPanel();
+    JPanel p1 = new JPanel();//区域模块
     JPanel p2 = new JPanel();
     JPanel p3 = new JPanel();
 
-    JLabel l1 = new JLabel("请输入当前速度");
+    JLabel l1 = new JLabel("请输入当前速度");//文字标签
     JLabel l2 = new JLabel("请输入当前温度");
     JLabel l3 = new JLabel("输出信息");
 
-    JTextField f1 = new JTextField();
+    JTextField f1 = new JTextField();//文字输入框
     JTextField f2 = new JTextField();
-    JTextArea a = new JTextArea(10,30);
-
+    JTextArea a = new JTextArea(10,30);//文字输出去区
     JButton b = new JButton("确定");
 
     public Robot_6(){
         this.setLayout(new BorderLayout());
-        p1.setLayout(new GridLayout(6, 3));
+        p1.setLayout(new GridLayout(6, 3));//区域模块1的部件添加
         p1.add(l1);
         p1.add(f1);
         p1.add(l2);
         p1.add(f2);
 
-        this.add(p1, BorderLayout.NORTH);
+        this.add(p1, BorderLayout.NORTH);//区域1在整个窗口中的位置布局
         p2.add(b, BorderLayout.CENTER);
         this.add(p2, BorderLayout.CENTER);
         p3.add(l3, BorderLayout.NORTH);
@@ -45,13 +44,13 @@ public class Robot_6 extends JFrame {
 
         a.setLineWrap(true);
 
-        this.setSize(400,400);
-        this.setVisible(true);
+        this.setSize(400,400);//窗口大小
+        this.setVisible(true);//窗口可显示
 
         Robot_id = "R06";
         Robot_name = "无限正义高达";
 
-        b.addActionListener(
+        b.addActionListener(//按钮动作侦测
                 new ActionListener()
                 {
                     public void actionPerformed(ActionEvent e)
